@@ -21,8 +21,8 @@
 			$('#btn').on('click',function(){
 				$.ajax({
 					url: "AjaxServlet",						// 送信先のサーブレットクラスのURLパターン
-					type: "GET",
-					data: {num : $("#text1").val()}			// 送信先のサーブレットクラスにリクエストパラメータとして送信(多分)
+					type: "GET",							// GETで送信
+					data: {num : $("#text1").val()}			// テキストボックス(inputタグtype="text"、idがtext1)で入力した値が送信先のサーブレットクラスにリクエストパラメータとして送信される(多分)
 				}).done(function (result) {
 					// 通信成功時のコールバック
 					alert(result);							// alertでインクリメントされた数値をポップアップに表示する
